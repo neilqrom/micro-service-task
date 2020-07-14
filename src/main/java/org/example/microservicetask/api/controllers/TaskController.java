@@ -29,7 +29,7 @@ public class TaskController {
         this.taskService = taskService;
     }
     
-    @GetMapping("/task")
+    @GetMapping("/tasks")
 	public ResponseEntity<Object> findAllTask() {
     	log.debug("into findAllTask()");
         return new ResponseEntity<>(this.taskService.findAllTask(), HttpStatus.OK);
