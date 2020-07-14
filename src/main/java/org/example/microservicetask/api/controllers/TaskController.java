@@ -5,14 +5,20 @@ import org.example.microservicetask.domain.entity.Task;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 
+@Api(value = "Gestion de tareas", consumes = "application/json")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping("/v1")
 @RestController
 @Slf4j
 public class TaskController {

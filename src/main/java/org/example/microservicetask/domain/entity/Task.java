@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,8 +23,10 @@ public class Task {
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 	    
+	    @NotNull
 	    private String title;
 	    
+	    @NotNull
 	    private String description;
 	    
 	    @ManyToOne
@@ -32,6 +35,7 @@ public class Task {
 	    @ManyToOne
 	    private Person person;
 	    
+	    @NotNull
 	    private Boolean active;
 
 }
