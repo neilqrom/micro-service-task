@@ -41,12 +41,12 @@ drop table if exists task;
        
        insert into person (id, name) values (null, 'Mario');
        
-       insert into status (id, description) values (null, 'new');
+       insert into status (id, description) values (null, 'nuevo');
        
-       insert into status (id, description) values (null, 'active');
+       insert into status (id, description) values (null, 'activo');
        
-       insert into status (id, description) values (null, 'locked');
+       insert into status (id, description) values (null, 'bloqueado');
        
-       insert into status (id, description) values (null, 'completed');
+       insert into status (id, description) values (null, 'completado');
        
        commit;
