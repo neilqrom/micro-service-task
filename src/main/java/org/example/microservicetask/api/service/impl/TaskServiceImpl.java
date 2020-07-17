@@ -25,6 +25,12 @@ public class TaskServiceImpl implements TaskService{
 	@Override
 	public Task createTask(Task task) {
 		log.debug("into createTask(task)");
+		if(task.getStatus().getId() == null) {
+			task.setStatus(null);
+		}
+		if(task.getPerson().getId() == null) {
+			task.setPerson(null);
+		}
 		return taskRepository.save(task);
 	}
 
@@ -32,6 +38,12 @@ public class TaskServiceImpl implements TaskService{
 	public Task updateTask(Task task) {
 		log.debug("into updateTask(task)");
 		if(taskRepository.findById(task.getId()).isPresent()) {
+			if(task.getStatus().getId() == null) {
+				task.setStatus(null);
+			}
+			if(task.getPerson().getId() == null) {
+				task.setPerson(null);
+			}
 			return taskRepository.save(task);
 		}
 		throw new BussinessException(HttpStatus.NOT_FOUND);

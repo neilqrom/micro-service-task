@@ -1,0 +1,28 @@
+{
+    "title":"tarea1",
+    "description":"primera tarea",
+    "status":{
+        "id":"1",
+        "description":"nuevo"
+    },
+    "person":{
+        "id":"1",
+        "name":"neil"
+    },
+    "active":true
+}
+
+
+ insert into person (id, name) values (null, 'Erika');
+       
+       insert into person (id, name) values (null, 'Dante');
+       
+       insert into person (id, name) values (null, 'Mario');
+       
+       insert into status (id, description) values (null, 'new');
+       
+       insert into status (id, description) values (null, 'active');
+       
+       insert into status (id, description) values (null, 'locked');
+       
+       insert into status (id, description) values (null, 'completed');
